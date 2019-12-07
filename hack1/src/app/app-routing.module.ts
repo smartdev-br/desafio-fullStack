@@ -8,6 +8,11 @@ import { AngularFireDatabaseModule} from '@angular/fire/database';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  {
+    path: 'primeirapagina',
+    loadChildren: () => import('./pages/primeirapagina/primeirapagina.module').then( m => m.PrimeirapaginaPageModule)
+  },
+
 ];
 
 @NgModule({
