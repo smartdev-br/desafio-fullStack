@@ -19,9 +19,8 @@ export class CartPage implements OnInit {
 
   remover(i){
     var busca = JSON.parse(localStorage.getItem("cart"));
-    // delete busca[i];
-    // let a = [];
     busca.splice(i);
     localStorage.setItem("cart", JSON.stringify(busca));
+    location.reload();
   }
 }
