@@ -4,6 +4,7 @@ import { map, take } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { DadosService } from '../dados.service'
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -12,12 +13,21 @@ import { DadosService } from '../dados.service'
 export class HomePage {
 
   items: Observable<any[]>;
+  itensCart: any = [];
 
   constructor(private ddServ: DadosService) {
     this.ddServ.getProdutos().subscribe( (res:any) => {
       console.log(res);
+      res.valor = res.preco;
       this.items = res;
     });
   }
+
+
+  click(dado){
+    console.log(dado);
+    this.itensCart.push(dado);
+    localStorage.setItem("cart", JSON.stringify(this.itensCart));
+    }
 
 }
