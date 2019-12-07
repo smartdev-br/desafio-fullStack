@@ -17,7 +17,11 @@ export class CartPage implements OnInit {
     this.produtos = result;
   }
 
-  remover(){
-    localStorage.removeItem("cart")
+  remover(i){
+    var busca = JSON.parse(localStorage.getItem("cart"));
+    // delete busca[i];
+    // let a = [];
+    busca.splice(i);
+    localStorage.setItem("cart", JSON.stringify(busca));
   }
 }
