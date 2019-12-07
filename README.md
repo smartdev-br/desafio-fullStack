@@ -8,11 +8,17 @@ Pegar os itens de compra no firebase com a Web API key AIzaSyCvbxfVSKEBhZOy_BzLA
 
 ### To do
  Criar uma lista de itens com imagem, descrição e valor
+ 
  Ao clicar em adicionar um item ele deve ser adicionardo ao carrinho
+ 
  Ao clicar em remover um item, ele deve ser removido do carrinho
+ 
  Se não houver nenhum item no carrinho, ele não pode clicar em remover o item
+ 
  Pode-se adicionar mais de um item por vez.
+ 
  Criar uma tela de checkout com os itens selecionados na tela anterior
+ 
  A tela de checkout deve ter o calculo com a soma de produtos selecionados no carrinho, assim como cada tipo de item exposto e sua quantidade no carrinho.
 
 ### plus
