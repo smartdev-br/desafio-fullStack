@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map, take } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { DadosService } from '../dados.service'
+import { DadosService } from '../dados.service';
+
 
 
 @Component({
@@ -24,6 +25,9 @@ export class HomePage {
     });
   }
 
+  ngOnInit() {
+
+  }
 
   click(dado){
     console.log(dado);
