@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DadosService } from '../services/dados.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,8 @@ import { DadosService } from '../services/dados.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  items: Observable<any[]>;
+
 
   constructor(public dadosService: DadosService) {
     this.getProducts();
@@ -14,7 +17,8 @@ export class Tab1Page {
 
   getProducts() {
     console.log("aaa")
-    this.dadosService.getProdutos().subscribe((res) => {
+    this.dadosService.getProdutos().subscribe((res:any) => { 
+      this.items = res;
       console.log(res);
     })
   }
