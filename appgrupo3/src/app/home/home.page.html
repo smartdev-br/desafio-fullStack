@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="toolbar">
     <ion-title>
       Ionic Blank
     </ion-title>
@@ -7,19 +7,24 @@
 </ion-header>
 
 <ion-content>
-  
-   
-    <ion-card *ngFor="let item of items">
-      <ion-card-header>
-        <ion-card-title>{{item.nome}}</ion-card-title>
-        <ion-card-subtitle>{{item.descricao}}</ion-card-subtitle>
-      </ion-card-header>
-    
+
+
+  <ion-card *ngFor="let item of items">
+    <ion-card-header>
+      <ion-card-title>{{item.nome}}</ion-card-title>
+      <ion-card-subtitle>{{item.descricao}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <div class="btn-and-valor">
+
       <p>
-          {{item.valor}}
+        PREÇO: ${{item.valor}}
       </p>
-    </ion-card>
-    
-  
-<ion-button color="warning">Warning</ion-button>
+      <ion-button color="light" (click)='addToCart(item)'> Add to car</ion-button>
+
+    </div>
+
+  </ion-card>
+
+
 </ion-content>
