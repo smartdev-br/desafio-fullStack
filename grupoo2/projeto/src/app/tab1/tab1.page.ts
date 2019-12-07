@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DadosService } from '../services/dados.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(public dadosService: DadosService) {
+    this.getProducts();
+  }
 
+  getProducts() {
+    console.log("aaa")
+    this.dadosService.getProdutos().subscribe((res) => {
+      console.log(res);
+    })
+  }
 }
