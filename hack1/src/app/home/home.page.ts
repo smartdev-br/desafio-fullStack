@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map, take } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { DadosService } from '../dados.service'
+import { DadosService } from '../dados.service';
+
 
 
 @Component({
@@ -16,13 +17,17 @@ export class HomePage {
   itensCart: any = [];
 
   constructor(private ddServ: DadosService) {
+    
     this.ddServ.getProdutos().subscribe( (res:any) => {
       console.log(res);
-      res.valor = res.preco;
+
       this.items = res;
     });
   }
 
+  ngOnInit() {
+
+  }
 
   click(dado){
     console.log(dado);
