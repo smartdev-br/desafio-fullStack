@@ -28,3 +28,6 @@ Os itens na collection de produtos no firebase estarão no seguinte formato
   preco: number,
 }
 ```
+
+# Atenção
+Todos os produtos devem usar a imagem que está salva no ./assets do projeto, não utilizem o que vem da base de dados.
