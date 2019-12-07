@@ -1,23 +1,11 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-  <div class="ion-padding">~
- 
+  
+  
+  <div class="ion-padding">
   <ion-app>
-      <ion-header translucent>
-        <ion-toolbar>
-          <ion-title>Card</ion-title>
-        </ion-toolbar>
-      </ion-header>,
+    
       <ion-content fullscreen>
-        
-        
         <ion-card *ngFor="let dado of items">
        <!-- <img src={{dado.imagem}} />  -->
           <ion-card-header>
@@ -31,11 +19,11 @@
           </ion-card-content>
           <ion-card-content>
              R$: {{dado.valor}}{{dado.preco}}
-         </ion-card-content> 
-          <ion-button color="success" (click)="click(dado)">Adicionar</ion-button>
+         </ion-card-content>
+         <div class="posicao-botao"> 
+          <ion-button color="secondary" (click)="click(dado)">Adicionar</ion-button>
+        </div>
         </ion-card>
-      
-      
       
       </ion-content>
     </ion-app>

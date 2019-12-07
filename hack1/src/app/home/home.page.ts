@@ -16,9 +16,10 @@ export class HomePage {
   itensCart: any = [];
 
   constructor(private ddServ: DadosService) {
+    
     this.ddServ.getProdutos().subscribe( (res:any) => {
       console.log(res);
-      res.valor = res.preco;
+
       this.items = res;
     });
   }

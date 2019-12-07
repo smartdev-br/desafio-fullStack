@@ -24,4 +24,10 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  openMenu() {
+    document.querySelector('ion-menu-controller')
+      .open();
+  }
+  
 }
