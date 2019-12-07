@@ -23,7 +23,10 @@ export class HomePage {
 
   }
   addToCart(item: any) {
+    
+    if(this.cartItems.) 
     this.cartItems.push(item);
+
     this.storage.set("carrinho", this.cartItems);
     this.storage.get('carrinho').then(res => {
       console.log("O CARRINHO", res);
